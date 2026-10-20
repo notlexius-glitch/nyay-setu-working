@@ -31,4 +31,6 @@ public class DocumentDto {
 
     // ✅ VERSION HISTORY ADDED
     private List<DocumentVersion> versions;
+    private Boolean isVerified; // True if file hash was successfully calculated
+
 }

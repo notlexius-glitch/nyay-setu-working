@@ -102,6 +102,7 @@ public class DocumentManagementService {
         return documentRepository.findByCaseId(caseId).stream()
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
+        return documentRepository.findCaseDocumentsWithDetails(caseId);
     }
 
     public List<DocumentDto> getCaseDocumentsWithAccessControl(UUID caseId, Long userId, String userRole) {
